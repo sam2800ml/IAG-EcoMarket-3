@@ -14,7 +14,7 @@ from langgraph.types import Command, interrupt
 from src import config as cfg
 from src.agente import prompts
 from src.agente.herramientas_agente import NOMBRES
-from src.agente.router import RIESGO, decidir_con_modelo, decidir_por_reglas
+from src.agente.router import RIESGO, decidir_con_modelo
 from src.herramientas.elegibilidad import permite_etiqueta
 from src.herramientas.escalamiento import escalar_a_humano
 from src.herramientas.pedidos import _sin_tildes, normalizar_correo, normalizar_numero
@@ -58,9 +58,7 @@ def crear_nodo_router(llm_json):
         if correo := normalizar_correo(mensaje):
             datos["correo"] = correo
 
-        ruta, motivo = decidir_por_reglas(mensaje, estado.get("ruta"))
-        if ruta is None:
-            ruta, motivo = decidir_con_modelo(llm_json, mensaje, historial_texto(estado))
+        ruta, motivo = decidir_con_modelo(llm_json, mensaje, historial_texto(estado))
         # Se limpian los campos "de este turno".
         return {"ruta": ruta, "motivo_ruta": motivo, "datos_cliente": datos, "fuentes": [], "etiqueta_turno": None}
 

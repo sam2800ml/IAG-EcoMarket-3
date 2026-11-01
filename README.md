@@ -18,7 +18,7 @@ Proyecto final: el asistente de atención al cliente de EcoMarket (Talleres 1 y 
 
 ```mermaid
 flowchart LR
-    U[Gradio] --> R{Router<br/>reglas + modelo}
+    U[Gradio] --> R{Router<br/>decide el modelo}
     R -->|informativa| RAG[RAG · Qdrant + bge-m3]
     R -->|pedido / devolución| A[Agente LangGraph]
     R -->|persona / cobros| E[Ticket]
@@ -76,7 +76,7 @@ python scripts/demo_simulada.py
 
 ```bash
 pip install -r requirements-dev.txt
-pytest                                   # 52 pruebas, sin Ollama (modelos simulados)
+pytest                                   # 46 pruebas, sin Ollama (modelos simulados)
 python -m evaluacion.evaluar             # 17 casos contra el modelo real → resultados/evaluacion.md
 OLLAMA_MODEL_AGENTE=qwen3:8b python -m evaluacion.evaluar   # comparar modelos
 python -m evaluacion.evaluar --simulado  # verifica el arnés de evaluación

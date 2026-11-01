@@ -118,11 +118,31 @@ class ModeloTextoSimulado(_Base):
 
 
 class ModeloJSONSimulado(_Base):
+    """Imita cómo clasificaría el router un modelo real guiado por el prompt (ver
+    src/agente/prompts.ROUTER): usa el mensaje y, para los casos de continuidad (el cliente
+    solo escribe su correo tras haber iniciado un trámite), también el historial.
+    """
+
+    _HUMANO = ("me cobraron", "cobro doble", "fraude", "estafa", "no reconozco", "demanda",
+              "hablar con una persona", "hablar con alguien", "un asesor", "supervisor", "un humano")
+    _AGENTE = ("devol", "reembols", "retorn", "etiqueta", "llego danad", "llego rot", "cambiar el producto",
+              "mi pedido", "mi compra", "mi orden", "donde esta mi", "cuando llega mi", "estado de mi")
+    _DIRECTO = ("pelicula", "capital de", "futbol")
+
     def _responder(self, mensajes) -> AIMessage:
         texto = _sin_tildes(mensajes[-1].content)
-        m = re.search(r"<ultimo_mensaje>\n(.*)\n</ultimo_mensaje>", texto, re.DOTALL)
-        ultimo = m.group(1) if m else texto
-        if any(p in ultimo for p in ("pelicula", "capital de", "futbol")):
+        m_hist = re.search(r"<historial>\n(.*?)\n</historial>", texto, re.DOTALL)
+        m_msg = re.search(r"<ultimo_mensaje>\n(.*)\n</ultimo_mensaje>", texto, re.DOTALL)
+        historial = m_hist.group(1) if m_hist else ""
+        ultimo = m_msg.group(1) if m_msg else texto
+
+        if any(p in ultimo for p in self._HUMANO):
+            ruta = "humano"
+        elif RE_NUMERO.search(ultimo) or any(p in ultimo for p in self._AGENTE):
+            ruta = "agente"
+        elif RE_CORREO.search(ultimo) and any(p in historial for p in ("eco-", "pedido", "devol")):
+            ruta = "agente"  # continúa un trámite ya iniciado, a juzgar por el historial
+        elif any(p in ultimo for p in self._DIRECTO) or len(ultimo.split()) <= 4:
             ruta = "directo"
         else:
             ruta = "informacion"

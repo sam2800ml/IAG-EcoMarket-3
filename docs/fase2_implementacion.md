@@ -21,7 +21,7 @@ src/
 └── agente/                      ← LangGraph
     ├── estado.py                estado del grafo
     ├── prompts.py               prompts del router, RAG, agente y respuesta directa
-    ├── router.py                reglas de entrada + clasificación con el modelo
+    ├── router.py                clasificación de la ruta con el modelo (sin reglas de respaldo)
     ├── herramientas_agente.py   las herramientas expuestas al modelo (@tool)
     ├── nodos.py                 router, rag, directo, escalamiento, agente, confirmar
     ├── grafo.py                 ensamblaje del grafo y checkpointer
@@ -123,9 +123,11 @@ El agente no solo ejecuta, también formatea la respuesta. El prompt del agente 
 
 ## 4. Robustez frente a un modelo pequeño
 
-Las pruebas de los talleres anteriores mostraron que un modelo de 2 000 a 4 000 millones de parámetros clasifica de forma inestable. Por eso el sistema no depende de que el modelo acierte siempre:
+Las pruebas de los talleres anteriores mostraron que un modelo de 2 000 a 4 000 millones de parámetros clasifica de forma inestable. Por eso el sistema no depende de que el modelo acierte siempre, aunque la clasificación de ruta sí la decide por completo el modelo:
 
-1. **Router por reglas primero:** el modelo solo decide los casos ambiguos.
+> **Decisión de diseño.** Las primeras versiones del router aplicaban reglas deterministas antes de consultar al modelo, igual que la elegibilidad. Se quitaron: a diferencia de la elegibilidad (que habilita una acción real con costo si se equivoca), elegir mal la ruta de entrada no ejecuta nada por sí mismo — en el peor caso el cliente recibe una respuesta del RAG en vez de pasar al agente, y puede repetir o reformular. El modelo decide siempre con un único prompt corto (4 rutas, `format=json`), y si falla el error se muestra al cliente en vez de adivinar una ruta por regla, igual que ya pasa en los nodos de RAG, respuesta directa y agente.
+
+1. **Prompt de clasificación acotado:** 4 rutas posibles, un ejemplo claro por ruta y salida forzada en JSON; es una tarea simple incluso para un modelo pequeño.
 2. **Pocas herramientas por ruta:** al agente solo llegan pedidos y devoluciones.
 3. **Datos conocidos en el prompt:** el número y el correo que escribió el cliente (extraídos con expresiones regulares) se le recuerdan al modelo, y las herramientas los completan si el modelo los olvida. Nunca se inventan: solo vienen de lo que escribió el cliente.
 4. **Argumentos opcionales y normalizados:** "eco 10005" pasa a "ECO-10005", el correo se pasa a minúsculas y el producto se reconoce por palabras ("cubiertos"). Un argumento faltante produce `DATOS_INCOMPLETOS`, no un error de validación.

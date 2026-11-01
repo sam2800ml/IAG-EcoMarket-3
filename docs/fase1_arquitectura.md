@@ -13,13 +13,13 @@ El enunciado ofrece dos opciones para la arquitectura RAG existente: incorporarl
 | **RAG como ruta del router** | Preguntas informativas ("¿cuánto cuesta el envío a Pasto?", "¿se puede devolver un champú?") | Son la mayoría de las consultas y no necesitan herramientas. Ir directo al RAG del Taller 2 es más rápido, más barato y más predecible que pasar por el agente |
 | **RAG como herramienta** (`buscar_politica`) | Dentro del agente, mientras atiende una devolución | El agente puede citar la política sin abandonar el trámite |
 
-El **router** decide primero con **reglas deterministas** (número de seguimiento, frases como "quiero devolver", "hablar con una persona") y solo consulta al modelo cuando ninguna regla decide. Es la lección de los talleres anteriores: con un modelo pequeño, la clasificación libre es inestable.
+El **router** clasifica cada mensaje con el **modelo** (número de seguimiento, frases como "quiero devolver" o "hablar con una persona" quedan en el prompt de `prompts.ROUTER`, no en código). Si el modelo no responde o devuelve algo que no es una ruta válida, el error se muestra al cliente en vez de decidir por él con una regla de respaldo: la misma postura que se sigue en los demás nodos (rag, directo, agente). La extracción de datos del cliente (número de seguimiento, correo) sí sigue siendo determinista con expresiones regulares, porque eso no es una decisión de negocio, es solo reconocer un formato.
 
 ## 3. Arquitectura general
 
 ```mermaid
 flowchart TD
-    U[Cliente en Gradio] --> R{Router<br/>1. reglas · 2. modelo}
+    U[Cliente en Gradio] --> R{Router<br/>clasifica el modelo}
     R -->|informativa| RAG[Ruta RAG<br/>Qdrant + bge-m3<br/>Taller 2]
     R -->|saludo / fuera de alcance| D[Respuesta directa]
     R -->|pide persona / cobros / queja| E[Escalamiento<br/>ticket determinista]

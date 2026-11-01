@@ -24,7 +24,7 @@ Preparación antes de grabar:
 2. **El grafo** (60 s): `src/agente/grafo.py`. Los nodos, el router con aristas condicionales, el ciclo agente → herramientas → agente y el nodo de confirmación.
 3. **El candado** (60 s): `generar_etiqueta_devolucion` con `InjectedState`, y `verificar_elegibilidad_producto` escribiendo en el estado con `Command`. "El modelo no ve estos parámetros: no puede falsificar una verificación."
 4. **La confirmación** (40 s): `nodo_confirmar` con `interrupt()`. Explicar por qué va en un nodo aparte: al reanudar, el nodo se ejecuta otra vez desde el principio.
-5. **Robustez y evaluación** (30 s): las reglas del router, los datos conocidos, el rescate de llamadas en texto. Mostrar `pytest` pasando y el reporte de `resultados/evaluacion.md`.
+5. **Robustez y evaluación** (30 s): la clasificación del router con el modelo, los datos conocidos, el rescate de llamadas en texto. Mostrar `pytest` pasando y el reporte de `resultados/evaluacion.md`.
 
 ## Parte 3 · Fase 4: demostración funcional (3–4 min)
 

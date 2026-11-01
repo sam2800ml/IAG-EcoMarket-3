@@ -17,7 +17,7 @@ def _tipos(eventos):
 
 def test_saludo_sin_herramientas(grafo, hilo):
     eventos = conversar(grafo, hilo, "Hola")
-    assert eventos[0] == {"tipo": "ruta", "ruta": "directo", "motivo": "regla: saludo"}
+    assert eventos[0] == {"tipo": "ruta", "ruta": "directo", "motivo": "modelo: directo"}
     assert _herramientas(eventos) == []
 
 
