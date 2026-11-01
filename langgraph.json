@@ -1,0 +1,5 @@
+{
+  "dependencies": ["."],
+  "graphs": {"ecomarket": "./src/agente/studio.py:grafo"},
+  "env": ".env"
+}

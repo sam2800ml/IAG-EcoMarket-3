@@ -1,0 +1,15 @@
+.git
+.venv
+venv
+__pycache__
+*.pyc
+.env
+var
+var_simulada
+qdrant_data
+resultados
+pruebas
+evaluacion
+docs
+notebooks
+.pytest_cache

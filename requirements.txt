@@ -1,0 +1,15 @@
+# Agente
+langgraph>=1.0,<2
+langgraph-checkpoint-sqlite>=3.0
+langchain-core>=1.0,<2
+langchain-ollama>=1.0
+# RAG (Taller 2)
+langchain-community>=0.4
+langchain-text-splitters>=1.0
+langchain-qdrant>=1.0
+qdrant-client>=1.15,<2
+pypdf>=5.0
+# Etiquetas en PDF
+reportlab>=4.0
+# Interfaz
+gradio>=6.0,<7

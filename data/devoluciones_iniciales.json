@@ -1,0 +1,14 @@
+[
+  {
+    "codigo_devolucion": "DEV-2026-0001",
+    "numero_seguimiento": "ECO-10016",
+    "id_producto": "P04",
+    "producto": "Bolsas de tela reutilizables (set x3)",
+    "transportadora": "Coordinadora",
+    "guia": "CO7781204459",
+    "fecha_creacion": "2026-09-22",
+    "fecha_limite_envio": "2026-09-29",
+    "motivo": "cambio_de_opinion",
+    "creada_por": "agente"
+  }
+]

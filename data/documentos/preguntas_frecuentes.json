@@ -1,0 +1,19 @@
+{
+  "fuente": "Centro de ayuda de EcoMarket",
+  "actualizado": "2026-10-01",
+  "preguntas": [
+    {"id": "FAQ01", "tema": "cuenta", "pregunta": "¿Necesito crear una cuenta para comprar?", "respuesta": "No. Puedes comprar como invitado con tu correo. Crear una cuenta te permite ver el historial de pedidos y guardar direcciones."},
+    {"id": "FAQ02", "tema": "cuenta", "pregunta": "Olvidé mi contraseña, ¿qué hago?", "respuesta": "En la página de inicio de sesión haz clic en '¿Olvidaste tu contraseña?' y te enviaremos un enlace a tu correo para crear una nueva. El enlace vence en 30 minutos."},
+    {"id": "FAQ03", "tema": "pedidos", "pregunta": "¿Puedo modificar un pedido después de pagarlo?", "respuesta": "Solo mientras está en preparación puedes cancelarlo y hacer uno nuevo. No es posible agregar o quitar productos a un pedido ya pagado."},
+    {"id": "FAQ04", "tema": "pedidos", "pregunta": "¿Cómo cancelo un pedido?", "respuesta": "Si el pedido está en preparación, escríbenos por el chat con tu número de seguimiento y lo cancelamos sin costo. El reembolso llega en 5 a 7 días hábiles."},
+    {"id": "FAQ05", "tema": "productos", "pregunta": "¿Los productos tienen certificaciones?", "respuesta": "Sí. Los textiles de algodón orgánico tienen certificación GOTS, el bambú de los cepillos tiene certificación FSC y nuestro café y miel provienen de productores con prácticas orgánicas verificadas."},
+    {"id": "FAQ06", "tema": "productos", "pregunta": "¿Cuándo vuelven a estar disponibles los productos agotados?", "respuesta": "Reponemos inventario cada dos semanas. En la página del producto puedes activar la opción 'Avísame' para recibir un correo cuando vuelva a estar disponible."},
+    {"id": "FAQ07", "tema": "tienda", "pregunta": "¿Tienen tienda física?", "respuesta": "No. EcoMarket es una tienda 100% en línea y no tenemos puntos de venta físicos ni puntos de recogida."},
+    {"id": "FAQ08", "tema": "tienda", "pregunta": "¿Venden al por mayor o a empresas?", "respuesta": "Sí. Para pedidos corporativos de más de 30 unidades escribe a empresas@ecomarket.example y un asesor te enviará una cotización con descuentos por volumen."},
+    {"id": "FAQ09", "tema": "promociones", "pregunta": "¿Cómo uso un cupón de descuento?", "respuesta": "Escribe el código en el campo 'Cupón' antes de pagar. Solo se puede usar un cupón por compra y no aplica sobre tarjetas regalo."},
+    {"id": "FAQ10", "tema": "sostenibilidad", "pregunta": "¿Qué hacen para reducir su huella ambiental?", "respuesta": "Usamos empaques de cartón reciclado sin plástico, compensamos la huella de carbono de los envíos con proyectos de reforestación en la Orinoquía y trabajamos con proveedores locales."},
+    {"id": "FAQ11", "tema": "sostenibilidad", "pregunta": "¿Puedo devolverles los empaques para reciclar?", "respuesta": "Sí. Con tu siguiente pedido puedes pedir que el mensajero recoja empaques de EcoMarket en buen estado; los reutilizamos en nuevos envíos."},
+    {"id": "FAQ12", "tema": "contacto", "pregunta": "¿Cuál es el horario de atención?", "respuesta": "El asistente virtual atiende 24 horas, todos los días. Los agentes humanos atienden de lunes a sábado de 7:00 a. m. a 9:00 p. m. y domingos y festivos de 9:00 a. m. a 5:00 p. m."},
+    {"id": "FAQ13", "tema": "contacto", "pregunta": "¿Puedo hablar con una persona?", "respuesta": "Sí. En cualquier momento puedes pedirle al asistente que te comunique con un agente humano, quien recibirá el resumen de tu conversación."}
+  ]
+}

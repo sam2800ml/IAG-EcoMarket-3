@@ -1,0 +1,4 @@
+-r requirements.txt
+pytest>=8.0
+# LangGraph Studio (depuración visual del grafo): langgraph dev
+langgraph-cli[inmem]

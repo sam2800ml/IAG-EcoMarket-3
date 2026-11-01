@@ -1,0 +1,342 @@
+[
+  {
+    "numero_seguimiento": "ECO-10001",
+    "cliente": "Laura Gómez",
+    "ciudad": "Bogotá",
+    "fecha_compra": "2026-09-23",
+    "productos": [
+      {
+        "id_producto": "P01",
+        "cantidad": 1
+      },
+      {
+        "id_producto": "P04",
+        "cantidad": 2
+      }
+    ],
+    "estado": "En preparación",
+    "transportadora": "Servientrega",
+    "fecha_estimada_entrega": "2026-09-29",
+    "fecha_entrega": null,
+    "enlace_rastreo": "https://ecomarket.example/rastreo/ECO-10001",
+    "correo": "laura.gomez@correo.example",
+    "nota": "El pedido se está empacando en el centro de distribución de Bogotá."
+  },
+  {
+    "numero_seguimiento": "ECO-10002",
+    "cliente": "Carlos Rodríguez",
+    "ciudad": "Medellín",
+    "fecha_compra": "2026-09-20",
+    "productos": [
+      {
+        "id_producto": "P09",
+        "cantidad": 1
+      }
+    ],
+    "estado": "Enviado",
+    "transportadora": "Coordinadora",
+    "fecha_estimada_entrega": "2026-09-26",
+    "fecha_entrega": null,
+    "enlace_rastreo": "https://ecomarket.example/rastreo/ECO-10002",
+    "correo": "carlos.rodriguez@correo.example",
+    "nota": "Despachado el 2026-09-22."
+  },
+  {
+    "numero_seguimiento": "ECO-10003",
+    "cliente": "Andrea Martínez",
+    "ciudad": "Cali",
+    "fecha_compra": "2026-09-19",
+    "productos": [
+      {
+        "id_producto": "P06",
+        "cantidad": 1
+      },
+      {
+        "id_producto": "P11",
+        "cantidad": 2
+      }
+    ],
+    "estado": "En tránsito",
+    "transportadora": "Envía",
+    "fecha_estimada_entrega": "2026-09-25",
+    "fecha_entrega": null,
+    "enlace_rastreo": "https://ecomarket.example/rastreo/ECO-10003",
+    "correo": "andrea.martinez@correo.example",
+    "nota": "El paquete llegó al centro de distribución de Cali."
+  },
+  {
+    "numero_seguimiento": "ECO-10004",
+    "cliente": "Juan Pérez",
+    "ciudad": "Bogotá",
+    "fecha_compra": "2026-09-15",
+    "productos": [
+      {
+        "id_producto": "P02",
+        "cantidad": 1
+      },
+      {
+        "id_producto": "P05",
+        "cantidad": 1
+      }
+    ],
+    "estado": "Entregado",
+    "transportadora": "Servientrega",
+    "fecha_estimada_entrega": "2026-09-20",
+    "fecha_entrega": "2026-09-20",
+    "enlace_rastreo": "https://ecomarket.example/rastreo/ECO-10004",
+    "correo": "juan.perez@correo.example",
+    "nota": ""
+  },
+  {
+    "numero_seguimiento": "ECO-10005",
+    "cliente": "Sofía Ramírez",
+    "ciudad": "Barranquilla",
+    "fecha_compra": "2026-09-14",
+    "productos": [
+      {
+        "id_producto": "P10",
+        "cantidad": 1
+      }
+    ],
+    "estado": "Retrasado",
+    "transportadora": "Coordinadora",
+    "fecha_estimada_entrega": "2026-09-28",
+    "fecha_entrega": null,
+    "enlace_rastreo": "https://ecomarket.example/rastreo/ECO-10005",
+    "correo": "sofia.ramirez@correo.example",
+    "nota": "Retraso por cierre vial debido a lluvias en la ruta Bogotá–Barranquilla. Fecha estimada original: 2026-09-22."
+  },
+  {
+    "numero_seguimiento": "ECO-10006",
+    "cliente": "Diego Torres",
+    "ciudad": "Bucaramanga",
+    "fecha_compra": "2026-09-08",
+    "productos": [
+      {
+        "id_producto": "P01",
+        "cantidad": 2
+      },
+      {
+        "id_producto": "P07",
+        "cantidad": 1
+      }
+    ],
+    "estado": "Entregado",
+    "transportadora": "Interrapidísimo",
+    "fecha_estimada_entrega": "2026-09-14",
+    "fecha_entrega": "2026-09-14",
+    "enlace_rastreo": "https://ecomarket.example/rastreo/ECO-10006",
+    "correo": "diego.torres@correo.example",
+    "nota": ""
+  },
+  {
+    "numero_seguimiento": "ECO-10007",
+    "cliente": "Valentina Castro",
+    "ciudad": "Cartagena",
+    "fecha_compra": "2026-09-16",
+    "productos": [
+      {
+        "id_producto": "P14",
+        "cantidad": 1
+      }
+    ],
+    "estado": "Cancelado",
+    "transportadora": null,
+    "fecha_estimada_entrega": null,
+    "fecha_entrega": null,
+    "enlace_rastreo": null,
+    "correo": "valentina.castro@correo.example",
+    "nota": "Cancelado a solicitud del cliente el 2026-09-17. Reembolso procesado el 2026-09-19."
+  },
+  {
+    "numero_seguimiento": "ECO-10008",
+    "cliente": "Mariana López",
+    "ciudad": "Pereira",
+    "fecha_compra": "2026-09-18",
+    "productos": [
+      {
+        "id_producto": "P03",
+        "cantidad": 2
+      },
+      {
+        "id_producto": "P08",
+        "cantidad": 1
+      },
+      {
+        "id_producto": "P12",
+        "cantidad": 1
+      }
+    ],
+    "estado": "Entregado",
+    "transportadora": "Interrapidísimo",
+    "fecha_estimada_entrega": "2026-09-22",
+    "fecha_entrega": "2026-09-22",
+    "enlace_rastreo": "https://ecomarket.example/rastreo/ECO-10008",
+    "correo": "mariana.lopez@correo.example",
+    "nota": ""
+  },
+  {
+    "numero_seguimiento": "ECO-10009",
+    "cliente": "Andrés Herrera",
+    "ciudad": "Manizales",
+    "fecha_compra": "2026-08-02",
+    "productos": [
+      {
+        "id_producto": "P06",
+        "cantidad": 1
+      }
+    ],
+    "estado": "Entregado",
+    "transportadora": "Envía",
+    "fecha_estimada_entrega": "2026-08-10",
+    "fecha_entrega": "2026-08-10",
+    "enlace_rastreo": "https://ecomarket.example/rastreo/ECO-10009",
+    "correo": "andres.herrera@correo.example",
+    "nota": ""
+  },
+  {
+    "numero_seguimiento": "ECO-10010",
+    "cliente": "Camila Vargas",
+    "ciudad": "Medellín",
+    "fecha_compra": "2026-09-17",
+    "productos": [
+      {
+        "id_producto": "P13",
+        "cantidad": 1
+      }
+    ],
+    "estado": "En tránsito",
+    "transportadora": "Coordinadora",
+    "fecha_estimada_entrega": "2026-09-26",
+    "fecha_entrega": null,
+    "enlace_rastreo": "https://ecomarket.example/rastreo/ECO-10010",
+    "correo": "camila.vargas@correo.example",
+    "nota": "Producto personalizado con el texto 'Planeta primero'."
+  },
+  {
+    "numero_seguimiento": "ECO-10011",
+    "cliente": "Felipe Morales",
+    "ciudad": "Pasto",
+    "fecha_compra": "2026-09-15",
+    "productos": [
+      {
+        "id_producto": "P15",
+        "cantidad": 2
+      },
+      {
+        "id_producto": "P04",
+        "cantidad": 1
+      }
+    ],
+    "estado": "Retrasado",
+    "transportadora": "Envía",
+    "fecha_estimada_entrega": "2026-09-27",
+    "fecha_entrega": null,
+    "enlace_rastreo": "https://ecomarket.example/rastreo/ECO-10011",
+    "correo": "felipe.morales@correo.example",
+    "nota": "Alta demanda en el centro de distribución; el despacho salió con 3 días de retraso. Fecha estimada original: 2026-09-24."
+  },
+  {
+    "numero_seguimiento": "ECO-10012",
+    "cliente": "Isabela Rojas",
+    "ciudad": "Cali",
+    "fecha_compra": "2026-09-19",
+    "productos": [
+      {
+        "id_producto": "P02",
+        "cantidad": 1
+      }
+    ],
+    "estado": "Entregado",
+    "transportadora": "Servientrega",
+    "fecha_estimada_entrega": "2026-09-23",
+    "fecha_entrega": "2026-09-23",
+    "enlace_rastreo": "https://ecomarket.example/rastreo/ECO-10012",
+    "correo": "isabela.rojas@correo.example",
+    "nota": ""
+  },
+  {
+    "numero_seguimiento": "ECO-10013",
+    "cliente": "Sebastián Ortiz",
+    "ciudad": "Bogotá",
+    "fecha_compra": "2026-08-28",
+    "productos": [
+      {
+        "id_producto": "P09",
+        "cantidad": 1
+      }
+    ],
+    "estado": "Devolución en proceso",
+    "transportadora": "Servientrega",
+    "fecha_estimada_entrega": "2026-09-05",
+    "fecha_entrega": "2026-09-05",
+    "enlace_rastreo": "https://ecomarket.example/rastreo/ECO-10013",
+    "correo": "sebastian.ortiz@correo.example",
+    "nota": "Devolución recibida en bodega el 2026-09-20. Reembolso estimado entre el 2026-09-25 y el 2026-10-01."
+  },
+  {
+    "numero_seguimiento": "ECO-10014",
+    "cliente": "Paula Jiménez",
+    "ciudad": "Pasto",
+    "fecha_compra": "2026-09-14",
+    "productos": [
+      {
+        "id_producto": "P07",
+        "cantidad": 1
+      },
+      {
+        "id_producto": "P11",
+        "cantidad": 1
+      }
+    ],
+    "estado": "Entregado",
+    "transportadora": "Envía",
+    "fecha_estimada_entrega": "2026-09-20",
+    "fecha_entrega": "2026-09-20",
+    "enlace_rastreo": "https://ecomarket.example/rastreo/ECO-10014",
+    "correo": "paula.jimenez@correo.example",
+    "nota": ""
+  },
+  {
+    "numero_seguimiento": "ECO-10015",
+    "cliente": "Ricardo Salazar",
+    "ciudad": "Bogotá",
+    "fecha_compra": "2026-09-15",
+    "productos": [
+      {
+        "id_producto": "P09",
+        "cantidad": 1
+      },
+      {
+        "id_producto": "P15",
+        "cantidad": 1
+      }
+    ],
+    "estado": "Entregado",
+    "transportadora": "Servientrega",
+    "fecha_estimada_entrega": "2026-09-18",
+    "fecha_entrega": "2026-09-18",
+    "enlace_rastreo": "https://ecomarket.example/rastreo/ECO-10015",
+    "correo": "ricardo.salazar@correo.example",
+    "nota": ""
+  },
+  {
+    "numero_seguimiento": "ECO-10016",
+    "cliente": "Natalia Ospina",
+    "ciudad": "Medellín",
+    "fecha_compra": "2026-09-12",
+    "productos": [
+      {
+        "id_producto": "P04",
+        "cantidad": 1
+      }
+    ],
+    "estado": "Entregado",
+    "transportadora": "Coordinadora",
+    "fecha_estimada_entrega": "2026-09-16",
+    "fecha_entrega": "2026-09-16",
+    "enlace_rastreo": "https://ecomarket.example/rastreo/ECO-10016",
+    "correo": "natalia.ospina@correo.example",
+    "nota": ""
+  }
+]
